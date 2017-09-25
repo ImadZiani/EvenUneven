@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <ul data-show-oddeven>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+    </ul>
+    <script>
+        
+        var nodelist = document.querySelectorAll("ul[data-show-oddeven] li");
+        var incre = 1;
+
+        function foddeven(value,index,arr){
+            if(incre == 0){
+                nodelist.item(index).title = "odd";
+                incre++
+                
+            } else if(incre == 1){
+                nodelist.item(index).title = "even";
+                incre--
+            }      
+        }
+        
+        nodelist.forEach(foddeven);
+    </script>
+</body>
+</html>
